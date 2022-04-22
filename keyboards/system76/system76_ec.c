@@ -1,3 +1,4 @@
+// clang-format off
 #include <string.h>
 
 #include "dynamic_keymap.h"
@@ -124,10 +125,10 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
     // Layer 1
     {
         .enable = 1,
-        .mode = RGB_MATRIX_STARTUP_MODE,
+        .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
-            .h = RGB_MATRIX_STARTUP_HUE,
-            .s = RGB_MATRIX_STARTUP_SAT,
+            .h = (uint16_t)(((float)208 * (float)255) / (float)360),
+            .s = (uint16_t)(((float)82 * (float)255) / (float)100),
             .v = RGB_MATRIX_STARTUP_VAL,
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
@@ -137,8 +138,8 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
         .enable = 1,
         .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
-            .h = RGB_MATRIX_STARTUP_HUE,
-            .s = RGB_MATRIX_STARTUP_SAT,
+            .h = (uint16_t)(((float)126 * (float)255) / (float)360),
+            .s = (uint16_t)(((float)80 * (float)255) / (float)100),
             .v = RGB_MATRIX_STARTUP_VAL,
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
@@ -148,8 +149,8 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
         .enable = 1,
         .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
-            .h = RGB_MATRIX_STARTUP_HUE,
-            .s = RGB_MATRIX_STARTUP_SAT,
+            .h = (uint16_t)(((float)280 * (float)255) / (float)360),
+            .s = (uint16_t)(((float)100 * (float)255) / (float)100),
             .v = RGB_MATRIX_STARTUP_VAL,
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
@@ -159,8 +160,8 @@ rgb_config_t layer_rgb[DYNAMIC_KEYMAP_LAYER_COUNT] = {
         .enable = 1,
         .mode = RGB_MATRIX_CUSTOM_active_keys,
         .hsv = {
-            .h = RGB_MATRIX_STARTUP_HUE,
-            .s = RGB_MATRIX_STARTUP_SAT,
+            .h = (uint16_t)(((float)359 * (float)255) / (float)360),
+            .s = (uint16_t)(((float)100 * (float)255) / (float)100),
             .v = RGB_MATRIX_STARTUP_VAL,
         },
         .speed = RGB_MATRIX_STARTUP_SPD,
@@ -428,3 +429,4 @@ void raw_hid_receive(uint8_t *data, uint8_t length) {
         bootloader_jump();
     }
 }
+// clang-format on
